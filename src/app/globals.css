@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+/* tokens.css 의 CSS 변수를 Tailwind 유틸리티로 노출한다.
+   컴포넌트에서는 bg-brand, text-muted, border-card 처럼 쓴다.
+   hex 를 직접 쓰지 않는다. */
+@theme inline {
+  --color-brand: var(--brand);
+  --color-brand-pure: var(--brand-pure);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-on-dark: var(--brand-on-dark);
+
+  --color-green-pure: var(--green-pure);
+  --color-green-deep: var(--green-deep);
+  --color-green-tint: var(--green-tint);
+
+  --color-base: var(--bg-base);
+  --color-alt: var(--bg-alt);
+  --color-panel: var(--bg-panel);
+  --color-bubble: var(--bg-bubble);
+  --color-th: var(--bg-th);
+  --color-input: var(--bg-input);
+  --color-hl: var(--bg-hl);
+
+  --color-line: var(--border);
+  --color-card: var(--border-card);
+  --color-divider: var(--divider);
+  --color-input-border: var(--border-input);
+  --color-btn-border: var(--border-btn);
+
+  --color-ink: var(--text);
+  --color-ink-2: var(--text-2);
+  --color-ink-3: var(--text-3);
+  --color-muted: var(--text-muted);
+
+  --color-dark-bg: var(--dark-bg);
+  --color-dark-card: var(--dark-card);
+  --color-dark-ink: var(--dark-text);
+  --color-dark-ink-2: var(--dark-text-2);
+  --color-dark-line: var(--dark-border);
+
+  --color-agree-fg: var(--agree-fg);
+  --color-agree-bg: var(--agree-bg);
+  --color-conflict-fg: var(--conflict-fg);
+  --color-conflict-bg: var(--conflict-bg);
+  --color-action-fg: var(--action-fg);
+  --color-action-bg: var(--action-bg);
+  --color-action-border: var(--action-border);
+
+  --color-persona-1: var(--persona-1);
+  --color-persona-2: var(--persona-2);
+  --color-persona-3: var(--persona-3);
+  --color-persona-4: var(--persona-4);
+  --color-persona-5: var(--persona-5);
+
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --radius-card: var(--r-card);
+  --radius-btn: var(--r-btn);
+  --radius-chip: var(--r-chip);
+}
+
+/* 라이트 전용. prefers-color-scheme 다크 블록을 추가하지 않는다. */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+/* 그림자를 쓰지 않는다. 구분은 1px 테두리로만. */

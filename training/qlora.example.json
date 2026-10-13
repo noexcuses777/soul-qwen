@@ -1,0 +1,18 @@
+{
+  "status": "scaffold_only_not_executable_training",
+  "base_model": "Qwen/Qwen3.5-9B",
+  "load_in_4bit": true,
+  "quantization_type": "nf4",
+  "compute_dtype": "bfloat16",
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "target_modules": ["q_proj", "k_proj", "v_proj", "o_proj"],
+  "max_sequence_length": 2048,
+  "per_device_train_batch_size": 1,
+  "gradient_accumulation_steps": 8,
+  "gradient_checkpointing": true,
+  "learning_rate": 0.0001,
+  "preference_method": "DPO after validated SFT",
+  "hardware": "Separate NVIDIA/cloud GPU; measure memory before full run",
+  "gate": "Verify Qwen3.5 hybrid module names, trainer compatibility and heldout data before use"
+}

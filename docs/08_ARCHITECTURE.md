@@ -1,0 +1,15 @@
+# Architecture v1
+
+Target recommendation revision: Target Generator → local source/limit checks + independent batch reviewer → optional one regeneration → human selection → Persona Builder/Validator. `POST /api/sessions/{id}/targets/recommend` replaces only a CREATED session without cards/transcript, and archives the old batch after successful generation. New/edited or unreviewed selections are checked before building. One shared Qwen server remains. See [docs/17](17_TARGET_RECOMMENDATION.md).
+
+2026-10-04 current override: [v5 continuous-chat contract](15_CONTINUOUS_CHAT_REVISION.md) supersedes v1–v4 display/start/follow-up/closure rules below. Name + segment only; selection → same normal composer; all-selected contribution/grounded peer comparison, default 2×n and maximum 3×n public turns per message; optional revision-bound report snapshot, continued chat and no automatic report per message. Earlier fixed v2/A–D and automatic v3 remain compatibility/evaluation paths. Historical measurements are not v5 validation.
+
+FastAPI backend + same-origin static browser UI minimizes frontend tooling. Pydantic validates boundaries. One OpenAI-compatible llama.cpp server at localhost:8080; sequential shared client guarded by lock. SQLite local sessions. No dynamic graph, vector DB or background agent framework.
+
+Services: deterministic IdeaBrief parser; LLM Target Generator; LLM Persona Builder; local+separate LLM Validator; Persona Agent; Moderator/Orchestrator; Turn Controller; independent Context Manager; grounded Report Generator; Calibration metric module. User selection endpoint precedes run endpoint. Failure persists state and does not publish a complete report. Budget/usage/logs separate input/output tokens and latency; no credentials stored.
+
+Current local release inference: Qwen3.5-4B text-only GGUF Q4_K_M, one shared8192-token slot, thinking disabled. Qwen3.5-9B remains the original larger alternative. Actual execution used Windows Intel Arc130V8GB; NVIDIA8GB and MacM4 16GB still require device-specific measurement. Reduce GPU layers/context on OOM and keep application/server context limits aligned. No vision projector. Mock is explicit and never replaces failed Qwen inference. Weights/runtime are external to the source release; install/start commands and primary-source URLs are in README and hardware docs.
+
+Tests cover malformed JSON/transport errors, source references, unknown preservation, target contrast, validation failure/retry, 1/2/3-card schedules, immutable hashes, private isolation/summary bounds, persisted APIs, report references, evaluator score/majority/order swap, annotation metrics, experiment budget, training leak guard. Real GPU performance and semantic quality remain separate validation gates.
+
+Revision4: `guided.py` owns cached Qwen question planning, WAITING/active thread/closing state machine, 60-public-turn session cap and report-on-finish. `adaptive.py` remains automatic v3 and legacy followup; shared `PersonaAgent` enforces independent buffers. No extra microservice/embedding model/dynamic graph. UI uses native dialog/profile/role labels and recommendation chips.

@@ -1,0 +1,34 @@
+name: SOUL Qwen contract
+on: [push, pull_request]
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    env:
+      LLM_MODE: mock
+      SESSION_DB: /tmp/soul-ci.sqlite3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: pip install -r requirements.lock.txt pytest
+      - run: python -m pytest -q
+      - run: node tests/frontend_korean.test.cjs
+      - run: npm ci --ignore-scripts
+      - name: Frontend API and session boundaries
+        run: node tests/soul_frontend.test.cjs
+      - name: Chat display and interaction labels
+        run: node tests/chat_presentation.test.cjs
+      - name: Followup recommendations and late response safety
+        run: node tests/next_question_frontend.test.cjs
+      - name: Persona display names and selection mapping
+        run: node tests/persona_presentation.test.cjs
+      - name: Report rendering and citations
+        run: node "src/app/(app)/report/report.test.cjs"
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run build

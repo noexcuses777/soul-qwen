@@ -1,0 +1,101 @@
+/* Soul — design tokens
+   단일 출처. 컴포넌트에서 색을 하드코딩하지 않는다.
+   라이트 전용. 다크 모드 미디어쿼리를 추가하지 않는다. */
+
+:root {
+  /* ── 브랜드 블루 ───────────────────────────── */
+  --brand-pure: #0277FC;   /* 로고 마크 전용. 텍스트·버튼 배경 금지 */
+  --brand: #0A57C4;        /* 버튼·링크·라벨·말풍선 */
+  --brand-hover: #07408F;
+  --brand-on-dark: #6BA9FF;
+
+  /* ── 그린 (매우 제한적으로) ──────────────────── */
+  --green-pure: #00E021;   /* 어두운 배경 위에서만. 그 위 글씨는 --dark-bg */
+  --green-deep: #0B7A1B;   /* 밝은 배경 위 텍스트·칩 */
+  --green-tint: #E8FAEC;
+
+  /* ── 중립 (쿨 그레이) ───────────────────────── */
+  --bg-base: #FFFFFF;
+  --bg-alt: #F5F7FA;
+  --bg-panel: #F8FAFC;
+  --bg-bubble: #F1F4F8;
+  --bg-th: #EDF1F6;
+  --bg-input: #FAFBFD;
+  --bg-hl: #F6F9FF;
+
+  --border: #E4E8EE;
+  --border-card: #E1E6ED;
+  --divider: #EBEFF4;
+  --border-input: #D5DCE5;
+  --border-btn: #C8D1DC;
+
+  --text: #101828;
+  --text-2: #344054;
+  --text-3: #475467;
+  --text-muted: #667085;   /* 이보다 연한 회색을 텍스트에 쓰지 않는다 */
+
+  /* ── 다크 섹션 (부분적으로만) ─────────────────── */
+  --dark-bg: #101828;
+  --dark-card: #1D2939;
+  --dark-text: #EAECF0;    /* 순백 대신 */
+  --dark-text-2: #D0D5DD;
+  --dark-border: #667085;
+
+  /* ── 의미 틴트 ─────────────────────────────── */
+  --agree-fg: #0B7A1B;     --agree-bg: #E8FAEC;
+  --conflict-fg: #9A461A;  --conflict-bg: #FDF1E7;
+  --action-fg: #0A57C4;    --action-bg: #EEF4FE;  --action-border: #C7DBFA;
+
+  /* ── 페르소나 5색 (이 다섯 개만) ───────────────── */
+  --persona-1: #14625E;  /* 딥틸 */
+  --persona-2: #B4551E;  /* 주황 */
+  --persona-3: #A33A6B;  /* 로즈 */
+  --persona-4: #7A4E9E;  /* 보라 */
+  --persona-5: #9A6A16;  /* 황토 */
+
+  /* ── 타이포 ───────────────────────────────── */
+  --font-sans: 'IBM Plex Sans KR', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* ── radius ──────────────────────────────── */
+  --r-card: 15px;
+  --r-btn: 12px;
+  --r-chip: 10px;
+  --r-pill: 999px;
+
+  /* ── 여백 ────────────────────────────────── */
+  --gutter-desktop: 80px;
+  --gutter-mobile: 20px;
+  --section-y: 88px;
+  --section-y-mobile: 44px;
+}
+
+/* 그림자를 쓰지 않는다. 구분은 1px 테두리로만 한다. */
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg-base);
+  color: var(--text);
+}
+
+/* 링크 기본색. @layer base 안에 둬야 Tailwind 유틸리티(text-white 등)가 이긴다.
+   레이어 밖에 두면 v4 에서는 유틸리티보다 우선해서, 파란 버튼(Link)의 글자가 파란색이 되어 안 보인다. */
+@layer base {
+  a { color: var(--brand); }
+  a:hover { color: var(--brand-hover); }
+}
+
+/* eyebrow / 라벨 / 숫자 — mono */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+/* 터치 영역 44px 이상 */
+button, [role="button"], a.btn {
+  min-height: 44px;
+}

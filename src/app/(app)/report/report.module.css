@@ -1,0 +1,17 @@
+.page { min-width: 0; }
+.body { width: 100%; max-width: 1440px; margin: 0 auto; padding: 36px clamp(20px, 7.6vw, 110px) 32px; box-sizing: border-box; }
+.copy { white-space: pre-wrap; overflow-wrap: anywhere; }
+.printOnly { display: none; }
+
+@media print {
+  .page :global(header), .page :global([data-report-controls]) { display: none !important; }
+  .body { max-width: none; padding: 0; font-size: 10pt; }
+  .body article, .body blockquote { break-inside: avoid; }
+  .body h1, .body h2, .body h3 { break-after: avoid; }
+  .body :global(details) { display: none; }
+  .body :global(button), .body :global(a[data-report-action]) { display: none; }
+  .body :global(.report-real-interview) { background: white !important; border: 1px solid #c8d1dc; }
+  .body :global(.report-real-interview *) { color: #101828 !important; }
+  .printOnly { display: block; }
+  .page { background: white; }
+}

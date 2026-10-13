@@ -1,0 +1,10 @@
+{
+  "dataset_kind":"human",
+  "predicted_themes":[],"real_themes":null,"supported_ids":null,"valid_ids":null,
+  "false_ids":null,"novel_useful_ids":null,
+  "predicted_alternatives":[],"real_alternatives":null,
+  "predicted_barriers":[],"real_barriers":null,
+  "predicted_contradictions":[],"real_contradictions":null,
+  "consistent_turns":null,"judged_turns":null,"unjustified_majority_changes":null,
+  "change_opportunities":null,"founder_usefulness":null,"confidence_observations":[]
+}

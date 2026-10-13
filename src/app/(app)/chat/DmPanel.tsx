@@ -1,0 +1,13 @@
+"use client";
+import { useEffect, useState } from "react";
+import { ChatComposer, PersonaMessage, UserMessage } from "@/components/chat/ChatParts";
+import { PersonaAvatar } from "@/components/PersonaAvatar";
+import type { SoulSession } from "@/lib/soul-api";
+import type { PersonaColor } from "@/lib/types";
+import { displayChatText } from "@/lib/chat-presentation";
+export function DmPanel({ persona, session, sending, onSend, onClose }: { persona: { id: string; name: string; segment: string; color: PersonaColor }; session: SoulSession; sending: boolean; onSend: (question: string) => void; onClose: () => void }) {
+  const [draft, setDraft] = useState("");
+  useEffect(() => { const escape = (event: KeyboardEvent) => { if (event.key === "Escape" && !sending) onClose(); }; window.addEventListener("keydown", escape); return () => window.removeEventListener("keydown", escape); }, [onClose, sending]);
+  const turns = session.transcript.filter(t => t.phase === "group" && t.persona_id === persona.id);
+  return <><button type="button" aria-label="지정 질문 닫기" onClick={onClose} className="fixed inset-0 z-20 bg-dark-bg/40"/><aside role="dialog" aria-modal="true" aria-label={`${persona.name}님에게 지정 질문`} className="fixed inset-y-0 right-0 z-30 flex w-full max-w-[480px] flex-col border-l border-line bg-base"><header className="flex items-center gap-3 border-b border-line p-5"><PersonaAvatar name={persona.name} color={persona.color} size="lg"/><div className="grow"><p className="font-semibold">{persona.name}</p><p className="mt-1 text-xs text-muted">{persona.segment}</p></div><button type="button" onClick={onClose} className="h-11 rounded-btn border border-btn-border px-3 text-sm">닫기</button></header><p className="border-b border-divider bg-bubble p-4 text-xs leading-relaxed text-ink-3">이 사람에게 지정해 질문해요. 답변은 단체 대화 기록과 리포트에도 남습니다.</p><div className="flex min-h-0 grow flex-col gap-4 overflow-y-auto p-5">{turns.length ? turns.map(turn => <div key={turn.id} className="flex flex-col gap-3"><UserMessage compact>{session.threads.find(thread => thread.id === turn.thread_id)?.question || turn.question}</UserMessage><PersonaMessage name={persona.name} color={persona.color}>{displayChatText(turn.content, persona.id, session.cards.map(card => ({ id: card.id, name: card.presentation.display_name })))}</PersonaMessage></div>) : <p className="text-sm text-muted">이 페르소나에게 궁금한 조건을 물어보세요.</p>}</div><div className="border-t border-line p-5"><ChatComposer inputId="direct-message" value={draft} onChange={setDraft} onSend={() => { onSend(draft); setDraft(""); }} sending={sending} placeholder={`${persona.name}님에게 물어보세요`}/><p className="mt-1 text-right text-xs text-muted">{draft.length} / 500자</p></div></aside></>;
+}
