@@ -1,0 +1,8 @@
+{
+  "dataset_kind": "synthetic",
+  "annotator": "synthetic schema demonstration, not human Gold",
+  "atoms": [
+    {"id":"a1","turn_id":"demo-u1","persona_id":"p1","text":"효과가 확인되면 검토할 수 있다는 가설","kind":"hypothesis","supported":true,"basis_fields":["identity_context.role"],"annotation_reason":"가설로 한정된 역할 기반 조건부 판단 예시"},
+    {"id":"a2","turn_id":"demo-u2","persona_id":"p1","text":"지난해 직접 사용했다","kind":"fact","supported":false,"annotation_reason":"사건 근거가 없는 날조를 감점하는 예시"}
+  ]
+}

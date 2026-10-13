@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soul — 타깃 직접 만들기</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body { margin: 0; font-family: 'IBM Plex Sans KR', system-ui, sans-serif; background: #FFFFFF; color: #101828; }
+a { color: #0A57C4; } a:hover { color: #07408F; }
+button, input, select, textarea { font-family: inherit; }
+</style>
+<style>
+  body { display: flex; justify-content: center; padding: 24px 0; background: #EDF1F6; }
+</style>
+</head>
+<body>
+<div style="width: 1440px; height: 1140px; box-sizing: border-box; background: #F5F7FA; display: flex; flex-direction: column">
+
+  <div style="height: 64px; flex-shrink: 0; box-sizing: border-box; padding: 0 32px; background: #FFFFFF; border-bottom: 1px solid #E4E8EE; display: flex; align-items: center; gap: 36px">
+    <div style="display: flex; align-items: center; gap: 9px">
+      <svg width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <circle cx="16" cy="16" r="6.5" stroke="#0A57C4" stroke-width="2.2"></circle>
+        <circle cx="16" cy="16" r="2.4" fill="#0A57C4"></circle>
+        <circle cx="16" cy="4" r="1.9" fill="#0B7A1B"></circle>
+        <circle cx="27.4" cy="12.3" r="1.9" fill="#0A57C4"></circle>
+        <circle cx="23.1" cy="25.7" r="1.9" fill="#0A57C4"></circle>
+        <circle cx="8.9" cy="25.7" r="1.9" fill="#0A57C4"></circle>
+        <circle cx="4.6" cy="12.3" r="1.9" fill="#0A57C4"></circle>
+      </svg>
+      <span style="font-size: 17px; font-weight: 600; letter-spacing: -0.01em">Soul</span>
+    </div>
+    <div style="flex-grow: 1; display: flex; align-items: center; gap: 6px">
+      <span style="display: flex; align-items: center; gap: 7px; padding: 6px 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #667085">01</span><span style="font-size: 13px; color: #475467">아이디어</span></span>
+      <span style="display: flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 9px; background: #EEF4FE; border: 1px solid #C7DBFA"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; color: #0A57C4">02</span><span style="font-size: 13px; font-weight: 600; color: #0A57C4">타깃</span></span>
+      <span style="display: flex; align-items: center; gap: 7px; padding: 6px 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #667085">03</span><span style="font-size: 13px; color: #475467">한눈에 보기</span></span>
+      <span style="display: flex; align-items: center; gap: 7px; padding: 6px 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #667085">04</span><span style="font-size: 13px; color: #475467">대화</span></span>
+      <span style="display: flex; align-items: center; gap: 7px; padding: 6px 12px"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #667085">05</span><span style="font-size: 13px; color: #475467">리포트</span></span>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1; box-sizing: border-box; padding: 28px 80px 0; display: flex; flex-direction: column; gap: 20px; overflow: hidden">
+
+    <div style="display: flex; align-items: flex-end; gap: 20px">
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px">
+        <div style="display: flex; align-items: center; gap: 7px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #667085">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+          타깃 고르기로 돌아가기
+        </div>
+        <h1 style="margin: 0; font-size: 28px; font-weight: 700; line-height: 1.38; letter-spacing: -0.022em">만나고 싶은 사람을 직접 만들어보세요</h1>
+        <p style="margin: 0; font-size: 15px; line-height: 1.7; color: #475467">이미 아는 고객이 있다면 그 사람을 그대로 넣어도 돼요. 이름과 요즘 상황만 쓰면 나머지는 채워드려요.</p>
+      </div>
+      <div style="display: flex; border: 1px solid #C8D1DC; border-radius: 12px; overflow: hidden">
+        <button type="button" style="height: 44px; padding: 0 18px; font-size: 14px; font-weight: 600; color: #FFFFFF; background: #0A57C4; border: none; cursor: pointer">직접 쓰기</button>
+        <button type="button" style="height: 44px; padding: 0 18px; font-size: 14px; color: #344054; background: #FFFFFF; border: none; border-left: 1px solid #C8D1DC; cursor: pointer">자료에서 만들기</button>
+      </div>
+    </div>
+
+    <div style="flex-grow: 1; display: flex; gap: 26px; overflow: hidden">
+
+      <div style="width: 800px; flex-shrink: 0; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E1E6ED; border-radius: 15px; padding: 22px 26px; display: flex; flex-direction: column; gap: 16px">
+
+        <div style="display: flex; align-items: center; gap: 12px">
+          <div style="flex-grow: 1; font-size: 16px; font-weight: 600">어떤 사람인가요</div>
+          <button type="button" style="display: flex; align-items: center; gap: 7px; height: 38px; padding: 0 14px; font-size: 13px; font-weight: 500; color: #0A57C4; background: #EEF4FE; border: 1px solid #C7DBFA; border-radius: 11px; cursor: pointer">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0A57C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"></path></svg>
+            나머지 채워주기
+          </button>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px">
+          <label for="pname" style="width: 96px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #475467; padding-top: 14px">이름 <span style="color: #9A461A">*</span></label>
+          <input id="pname" type="text" value="이수현" style="box-sizing: border-box; width: 196px; height: 44px; padding: 0 13px; font-size: 15px; background: #FAFBFD; border: 1px solid #D5DCE5; border-radius: 11px">
+          <label for="page" style="flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #475467; padding-top: 14px">나이</label>
+          <input id="page" type="text" value="29" style="box-sizing: border-box; width: 84px; height: 44px; padding: 0 13px; font-size: 15px; background: #FAFBFD; border: 1px solid #D5DCE5; border-radius: 11px">
+          <label for="pgen" style="flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #475467; padding-top: 14px">성별</label>
+          <select id="pgen" style="box-sizing: border-box; width: 128px; height: 44px; padding: 0 11px; font-size: 15px; background: #FAFBFD; border: 1px solid #D5DCE5; border-radius: 11px">
+            <option>여성</option>
+            <option>남성</option>
+            <option>밝히지 않음</option>
+          </select>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px">
+          <label for="pjob" style="width: 96px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #475467; padding-top: 14px">하는 일</label>
+          <input id="pjob" type="text" value="공유오피스 운영 매니저" style="box-sizing: border-box; flex-grow: 1; height: 44px; padding: 0 13px; font-size: 15px; background: #FAFBFD; border: 1px solid #D5DCE5; border-radius: 11px">
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px">
+          <label for="psit" style="width: 96px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #475467; padding-top: 14px">요즘 상황 <span style="color: #9A461A">*</span></label>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px">
+            <textarea id="psit" rows="3" style="box-sizing: border-box; width: 100%; padding: 12px 13px; font-size: 15px; line-height: 1.75; background: #FAFBFD; border: 1px solid #D5DCE5; border-radius: 11px; resize: none">입주사 대상 창업 프로그램을 맡았는데, 참여 팀들이 매번 타깃을 못 잡고 옵니다. 멘토를 불러도 사람마다 말이 달라서 팀들이 더 헷갈려 해요.</textarea>
+            <div style="font-size: 12px; line-height: 1.6; color: #667085">두세 줄로 적어주세요. 하는 일, 요즘 쫓기는 것, 주변에 누가 있는지까지 들어가면 이 사람이 대화에서 자기 얘기를 합니다.</div>
+          </div>
+        </div>
+
+        <div style="height: 1px; background: #EBEFF4"></div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px">
+          <div style="width: 96px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #475467; padding-top: 8px">관심사</div>
+          <div style="flex-grow: 1; display: flex; flex-wrap: wrap; gap: 7px; align-items: center">
+            <span style="display: flex; align-items: center; gap: 7px; font-size: 13px; padding: 7px 11px; background: #F1F4F8; border-radius: 10px; color: #344054">프로그램 운영
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+            </span><span style="display: flex; align-items: center; gap: 7px; font-size: 13px; padding: 7px 11px; background: #F1F4F8; border-radius: 10px; color: #344054">입주사 만족도
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+            </span><span style="display: flex; align-items: center; gap: 7px; font-size: 13px; padding: 7px 11px; background: #F1F4F8; border-radius: 10px; color: #344054">운영비로 집행
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#667085" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+            </span>
+            <button type="button" style="display: flex; align-items: center; gap: 6px; font-size: 13px; padding: 7px 11px; color: #475467; background: #FFFFFF; border: 1px dashed #C8D1DC; border-radius: 10px; cursor: pointer">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#475467" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+              추가
+            </button>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px">
+          <div style="width: 96px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #475467; padding-top: 8px">걱정</div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px">
+            <div style="display: flex; flex-wrap: wrap; gap: 7px; align-items: center">
+              <span style="display: flex; align-items: center; gap: 7px; font-size: 13px; padding: 7px 11px; background: #FDF1E7; border-radius: 10px; color: #9A461A">멘토마다 말이 다름
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9A461A" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+            </span><span style="display: flex; align-items: center; gap: 7px; font-size: 13px; padding: 7px 11px; background: #FDF1E7; border-radius: 10px; color: #9A461A">팀들이 안 따라옴
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#9A461A" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"></path></svg>
+            </span>
+              <button type="button" style="display: flex; align-items: center; gap: 6px; font-size: 13px; padding: 7px 11px; color: #475467; background: #FFFFFF; border: 1px dashed #C8D1DC; border-radius: 10px; cursor: pointer">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#475467" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+              추가
+            </button>
+            </div>
+            <div style="font-size: 12px; line-height: 1.6; color: #9A461A">하나는 꼭 적어주세요. 걱정이 없으면 이 사람은 뭘 물어도 좋다고만 답합니다.</div>
+          </div>
+        </div>
+
+        <div style="height: 1px; background: #EBEFF4"></div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px">
+          <label for="pnotes" style="width: 96px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #475467; padding-top: 14px">더 알려줄 것</label>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 6px">
+            <textarea id="pnotes" rows="4" placeholder="말투나 성격, 돈·시간 사정, 전에 겪은 일처럼 더 알려주고 싶은 게 있으면 자유롭게 적어주세요." style="box-sizing: border-box; width: 100%; padding: 12px 13px; font-size: 15px; line-height: 1.75; background: #FAFBFD; border: 1px solid #D5DCE5; border-radius: 11px; resize: none"></textarea>
+            <div style="font-size: 12px; line-height: 1.6; color: #667085">여기 적은 내용은 카드에 보이지 않지만, 대화할 때는 그대로 반영돼요.</div>
+          </div>
+        </div>
+
+        <div style="height: 1px; background: #EBEFF4"></div>
+
+        <div style="display: flex; align-items: flex-start; gap: 14px">
+          <div style="width: 96px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #475467; padding-top: 12px">가진 자료</div>
+          <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 8px">
+            <div style="display: flex; align-items: center; gap: 10px; box-sizing: border-box; padding: 11px 13px; background: #F8FAFC; border: 1px solid #E1E6ED; border-radius: 11px">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#475467" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0"><path d="M14 3v5h5"></path><path d="M19 8v11a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h8z"></path></svg>
+              <div style="flex-grow: 1; font-size: 14px">입주사_인터뷰_녹취.txt</div>
+              <div style="font-size: 12px; color: #667085">이 내용대로 말해요</div>
+            </div>
+            <button type="button" style="align-self: flex-start; display: flex; align-items: center; gap: 7px; height: 44px; padding: 0 14px; font-size: 14px; color: #344054; background: #FFFFFF; border: 1px dashed #C8D1DC; border-radius: 12px; cursor: pointer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#344054" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5"></path><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"></path></svg>
+              녹취나 설문 올리기
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 14px">
+
+        <div style="display: flex; align-items: center; gap: 8px">
+          <div style="flex-grow: 1; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; color: #667085">목록에서는 이렇게 보여요</div>
+        </div>
+
+        <div style="box-sizing: border-box; background: #FFFFFF; border: 2px solid #9A6A16; border-radius: 15px; padding: 18px 20px; display: flex; flex-direction: column; gap: 14px">
+          <div style="display: flex; align-items: center; gap: 11px">
+            <div style="width: 38px; height: 38px; flex-shrink: 0; border-radius: 50%; background: #9A6A16; color: #FFFFFF; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center">수</div>
+            <div style="flex-grow: 1; display: flex; flex-direction: column; gap: 1px">
+              <div style="font-size: 16px; font-weight: 600">이수현</div>
+              <div style="font-size: 12px; color: #667085">29 · 여 · 공유오피스 운영 매니저</div>
+            </div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.1em; padding: 5px 9px; background: #F1F4F8; border-radius: 9px; color: #475467">직접 만듦</div>
+          </div>
+
+          <div style="font-size: 14px; line-height: 1.75; color: #344054">입주사 대상 창업 프로그램을 맡았는데, 참여 팀들이 매번 타깃을 못 잡고 옵니다. 멘토를 불러도 사람마다 말이 달라서 팀들이 더 헷갈려 해요.</div>
+
+          <div style="height: 1px; background: #EBEFF4"></div>
+
+          <div style="display: flex; flex-direction: column; gap: 9px">
+            <div style="display: flex; align-items: flex-start; gap: 10px">
+              <div style="width: 62px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #667085; padding-top: 5px">관심사</div>
+              <div style="flex-grow: 1; display: flex; flex-wrap: wrap; gap: 5px"><span style="font-size: 12px; padding: 4px 9px; background: #F1F4F8; border-radius: 9px; color: #344054">프로그램 운영</span><span style="font-size: 12px; padding: 4px 9px; background: #F1F4F8; border-radius: 9px; color: #344054">입주사 만족도</span><span style="font-size: 12px; padding: 4px 9px; background: #F1F4F8; border-radius: 9px; color: #344054">운영비로 집행</span></div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 10px">
+              <div style="width: 62px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; color: #667085; padding-top: 5px">걱정</div>
+              <div style="flex-grow: 1; display: flex; flex-wrap: wrap; gap: 5px"><span style="font-size: 12px; padding: 4px 9px; background: #FDF1E7; border-radius: 9px; color: #9A461A">멘토마다 말이 다름</span><span style="font-size: 12px; padding: 4px 9px; background: #FDF1E7; border-radius: 9px; color: #9A461A">팀들이 안 따라옴</span></div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="box-sizing: border-box; background: #F8FAFC; border: 1px solid #E1E6ED; border-radius: 14px; padding: 15px 17px; display: flex; flex-direction: column; gap: 7px">
+          <div style="font-size: 13px; font-weight: 600; color: #344054">참고</div>
+          <div style="font-size: 13px; line-height: 1.75; color: #475467">내가 바라는 모습으로 만들면 대화에서 내가 듣고 싶은 말만 나올 수 있어요. 이 사람이 망설일 이유나 부정적인 이유도 적어주면 좋아요.</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div style="height: 82px; flex-shrink: 0; box-sizing: border-box; padding: 0 80px; background: #FFFFFF; border-top: 1px solid #E4E8EE; display: flex; align-items: center; gap: 12px">
+    <div style="flex-grow: 1; font-size: 14px; color: #667085">저장하면 추천받은 다섯 명과 같은 목록에 들어가요. 거기서 골라 대화를 시작하면 돼요.</div>
+    <button type="button" style="height: 46px; padding: 0 18px; font-size: 14px; color: #344054; background: #FFFFFF; border: 1px solid #C8D1DC; border-radius: 12px; cursor: pointer">취소</button>
+    <button type="button" style="height: 48px; padding: 0 24px; font-size: 15px; font-weight: 600; color: #FFFFFF; background: #0A57C4; border: none; border-radius: 12px; cursor: pointer">목록에 추가하기</button>
+  </div>
+
+</div>
+</body>
+</html>

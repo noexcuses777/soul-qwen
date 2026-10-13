@@ -1,0 +1,16 @@
+{
+  "dataset_kind":"synthetic",
+  "predicted_themes":["time","alternative","budget"],
+  "real_themes":["time","alternative","trust"],
+  "supported_ids":["time","alternative"],
+  "valid_ids":["time","alternative"],
+  "false_ids":["budget"],
+  "novel_useful_ids":["alternative"],
+  "predicted_alternatives":["manual"],"real_alternatives":["manual","mentor"],
+  "predicted_barriers":["trust"],"real_barriers":["trust"],
+  "predicted_contradictions":["payer"],"real_contradictions":["payer"],
+  "consistent_turns":8,"judged_turns":10,
+  "unjustified_majority_changes":1,"change_opportunities":3,
+  "founder_usefulness":3,
+  "confidence_observations":[{"probability":0.7,"observed":1},{"probability":0.8,"observed":0}]
+}
