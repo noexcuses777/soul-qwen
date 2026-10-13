@@ -1,10 +1,10 @@
 # SOUL — Qwen 기반 페르소나 인터뷰
 
-저장소: https://github.com/noexcuses777/soul-qwen · 구현 브랜치: `codex/soul-qwen-release`.
+저장소: https://github.com/noexcuses777/soul-qwen · 구현 브랜치: `soul-qwen-release`.
 현재 실행 모델은 Qwen3.5-4B Q4_K_M이며 추가 fine-tuning을 수행하지 않았다. 가중치, API 키, 실제 대화 DB, 로그, 사용자 자료는 이 저장소에 포함하지 않는다. 원본 프론트엔드의 MIT 고지는 LICENSE에 유지한다.
 
 ```shell
-git clone --branch codex/soul-qwen-release https://github.com/noexcuses777/soul-qwen.git
+git clone --branch soul-qwen-release https://github.com/noexcuses777/soul-qwen.git
 cd soul-qwen
 ```
 

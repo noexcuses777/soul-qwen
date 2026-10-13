@@ -1,5 +1,9 @@
 # SOUL 통합 상태 — 2026-10-12
 
+## 브랜치 복구
+
+- 삭제된 구현 브랜치를 원래 게시 커밋 `8fcb30a`에서 `soul-qwen-release`로 복구했다. README의 clone 명령도 새 이름으로 갱신했다. 코드·데이터 제외 규칙·main 보호 규칙은 유지한다.
+
 ## 독립 저장소 게시 준비 (2026-10-13)
 
 - 현재 구현을 `noexcuses777/soul-qwen`의 `codex/soul-qwen-release` 브랜치용 독립 checkout에 복사했다. 원래 서비스 폴더·DB·모델 및 기존 저장소 Git 이력은 변경하거나 복사하지 않았다.
